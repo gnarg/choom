@@ -42,6 +42,6 @@
     },
     {
         "value": "Random cybertech",
-        "lookup": "cybertech:0-9"
+        "ref": "cybertech:0-9"
     }
 ]
