@@ -1,0 +1,50 @@
+[
+    {
+        "value": "WEIAN-Hammer",
+        "details": "Nearby devices are triggered to perform their function, i.e. open/close unlocked doors, trigger sprinklers, start a camera recording, adjust the AC. You can trigger 5 devices as you choose over the next 5 rounds."
+    },
+    {
+        "value": "RCDOvrChargr",
+        "details": "One target gets +d6 on all Agility and Strength tests for Knowledge+3 rounds."
+    },
+    {
+        "value": "Nok_Nok",
+        "details": "Open a nearby locked door. Failure may trigger an alarm."
+    },
+    {
+        "value": "False Flagger",
+        "details": "Fake an alarm or the location of a triggered alarm. Any response to a real alarm is delayed by 2d6 minutes."
+    },
+    {
+        "value": "SigilTag",
+        "details": "This location and nearby systems are tagged with your invisible sigil, enabling you to remotely activate Apps as if you were present. Only two locations can be tagged at the same time."
+    },
+    {
+        "value": ">eRase",
+        "details": "Cut or copy the latest 10 minutes of stored information from any type of recording / surveillance device."
+    },
+    {
+        "value": "De-fenc/der",
+        "details": "Take control of a nearby turret, drone or similar defense system for d6 rounds."
+    },
+    {
+        "value": "Blood Snoot",
+        "details": "Tracks down an enemy hacker and deals d4 damage each round until they pass a DR12 Knowledge test or die."
+    },
+    {
+        "value": "PathMapper",
+        "details": "Uses nearby sensors, cameras and public information to create a detailed 3D map of the surrounding ~100m."
+    },
+    {
+        "value": "CTechAttak",
+        "details": "d3 nearby cybered targets lose a total of 4d10 HP."
+    },
+    {
+        "value": "beaconworm",
+        "details": "Place a tracker into a device or cybertech, enabling you to track its movements in real-time for the coming d4 weeks."
+    },
+    {
+        "value": "TrolleySkipper",
+        "details": "Automated defenses have trouble tracking a person of your choice and prioritize other available targets."
+    }
+]

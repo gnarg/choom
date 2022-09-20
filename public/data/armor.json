@@ -1,0 +1,26 @@
+[
+    {
+        "value": "No armor",
+        "details": "TIER 0"
+    },
+    {
+        "value": "StyleGuard",
+        "details": "TIER 1 Looks just like clothes!"
+    },
+    {
+        "value": "Rough",
+        "details": "TIER II A heavy-duty jacket or full kevlar."
+    },
+    {
+        "value": "SmartWear",
+        "details": "TIER II Equipped with Adrenachrome_HST auto-injector that fires if the wearer is Battered."
+    },
+    {
+        "value": "Combat Armor",
+        "details": "TIER III +2DR on Agility tests including Defense. Equipped with Adrenachrome_HST auto-injector that fires if the wearer is Battered."
+    },
+    {
+        "value": "EndGame-Class ExoSuit",
+        "details": "TIER IV Equipped with multiple customizable injectors, jump jets, motorized joints and more. +4DR on Agility tests. Defense is +2DR, Toughness and Strength are −2DR. Can jump 4× regular height and length."
+    }
+]

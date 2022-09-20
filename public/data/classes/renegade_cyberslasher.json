@@ -1,0 +1,69 @@
+{
+    "name": "Renegade Cyberslasher",
+    "description": "You are DEATH incarnate — a frenzied flurry of chrome, murder and blood-stained steel. But yours is no mindless rage. You match your trained and cybernetically enhanced body with an equally disciplined mind. You used to kill for a cause, for an ideal. Now? You kill for money.",
+    "hp": "1-10",
+    "glitches": "1-2",
+    "abilities": {
+        "agility": "0",
+        "knowledge": "-2",
+        "presence": "+1",
+        "strength": "+1",
+        "toughness": "0"
+    },
+    "special": "Start with one d12 roll for a random Cybertech. Replace any App or Nano with anaother d12 cybertech roll.",
+    "weapon": "0-11",
+    "armor": "0-2",
+    "debt": "3d6",
+    "flavor": {
+        "description": "You start each day with",
+        "values": [
+            {
+                "value": "doing yoga and meditation."
+            },
+            {
+                "value": "chugging a mix of carefully selected and measured stimulants."
+            },
+            {
+                "value": "assiduously minding your three favorite plants."
+            },
+            {
+                "value": "obsessively laying out your clothes and cleaning your gear."
+            },
+            {
+                "value": "doing a recreational blood transfusion."
+            },
+            {
+                "value": "strengthening your inner daemon through a chaos magick ritual."
+            }
+        ]
+    },
+    "bonus": {
+        "description": "Your trenchcoat hides most of your",
+        "values": [
+            {
+                "value": "Ancient blade",
+                "details": "d8 that has claimed 1.000 souls. Or so you say. If you are the first to strike in combat, you deal double damage."
+            },
+            {
+                "value": "Steelcutter chainsaw",
+                "details": "d8 Absolutely not made for combat. When hitting for maximum damage, it gets stuck for d3 rounds, dealing damage automatically as long as it remains there."
+            },
+            {
+                "value": "Filament zweihänder",
+                "details": "d10 that makes everyone around you nervous. Crits hit with such a force that your target is thrown up in the air, making them an easy target (-2DR) for anyone else."
+            },
+            {
+                "value": "Wire-wrapped baseball bat",
+                "details": "d8 hooked up to a battery. You can supercharge it, dealing +d4 damage to your target and to yourself."
+            },
+            {
+                "value": "Dual Logans",
+                "details": "d8 that make that sound when you pop ʼem out. Once per fight, you can surprise a victim by popping out feet claws as well, attacking at DR8."
+            },
+            {
+                "value": "GodDAMN flail",
+                "details": "d8 Spiked. Absolutely medieval. Crumples and shreds enemy armor a tier when you hit for 6+ damage."
+            }
+        ]
+    }
+}

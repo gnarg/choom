@@ -1,0 +1,47 @@
+[
+    {
+        "value": "Paracord",
+        "details": "30m"
+    },
+    {
+        "value": "Micro torch cutter",
+        "details": "power for d4 uses"
+    },
+    {
+        "value": "Bio/ID scanner",
+        "details": "can track persom within 50m"
+    },
+    {
+        "value": "Breathing mask",
+        "details": "provides oxygen in gas or underwater"
+    },
+    {
+        "value": "Collapsible ladder",
+        "details": "5m"
+    },
+    {
+        "value": "First aid kit",
+        "details": "d3 uses, stops bleeding/infection and heals d6 HP"
+    },
+    {
+        "value": "Crowbar",
+        "details": "d4 damage"
+    },
+    {
+        "value": "Superlube"
+    },
+    {
+        "value": "Grappling-hook crossbow",
+        "details": "d4 damage"
+    },
+    {
+        "value": "Small bottle of pulverized acid"
+    },
+    {
+        "value": "Crime scene kit"
+    },
+    {
+        "value": "Random cybertech",
+        "lookup": "cybertech:0-9"
+    }
+]

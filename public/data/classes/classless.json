@@ -1,0 +1,15 @@
+{
+    "name": "Street Punk",
+    "hp": "1-8",
+    "glitches": "1-2",
+    "abilities": {
+        "agility": "0",
+        "knowledge": "0",
+        "presence": "0",
+        "strength": "0",
+        "toughness": "0"
+    },
+    "weapon": "0-11",
+    "armor": "0-2",
+    "debt": "3d6"
+}

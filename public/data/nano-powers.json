@@ -1,0 +1,50 @@
+[
+    {
+        "value": "Benevolent suturedroids",
+        "details": "d2 people regain d10 HP each. A roll of 6 or greater comes with a free migraine."
+    },
+    {
+        "value": "Pineal gland stimulation",
+        "details": "For d4 rounds, you can feel nearby data flows. You can hear a short conversation or message, sense the direction of a large data source or see the last few seconds of the most recently recorded information on a device."
+    },
+    {
+        "value": "Cosmic dust bots",
+        "details": "An area of up to 20m in diameter is covered in dust and darkness for the duration of a fight or for 10 rounds. It tastes like stained, rusted metal."
+    },
+    {
+        "value": "Psychic scalpels",
+        "details": "A living target of your choice tests Presence DR14 or loses d10 HP. Their eyes bleed, and their ears ring."
+    },
+    {
+        "value": "Bent prism",
+        "details": "A person becomes invisible and attacks and defends at DR6. The effect lasts for d6 rounds or until you are hurt."
+    },
+    {
+        "value": "Crawling carapace",
+        "details": "d4 targets gain −d6 armor for 4 rounds. Sometimes it feels as if this thing has a will of its own, but that’s probably just your imagination."
+    },
+    {
+        "value": "Chill of the void",
+        "details": "Up to d4 targets test Toughness DR14 or take d4 damage. The next round, the test is DR16 and the damage taken is d8. In the third and fourth rounds, the test is DR16 and the damage is 2d10. Frost covers the area, and snowflakes float in the air."
+    },
+    {
+        "value": "To dust",
+        "details": "Half a cubic meter of inorganic matter turns to dust. If the target is attached to or in the hands of a conscious creature, the test to activate the power is DR14."
+    },
+    {
+        "value": "Dead cell spirits",
+        "details": "By consuming a handful of something dead, you can relive their last moments as if through a hazy and distorted lens. Test Presence DR14 to avoid taking d6 damage from ego death."
+    },
+    {
+        "value": "Lifetap",
+        "details": "Choose two targets, one to heal and one to hurt. The healing target tests Presence DR10 to heal d6 damage, while the second target is dealt d6 damage. Failure deals both targets d3 damage. A translucent, oozing bridge of blood and energy flows between the creatures, like oil in water."
+    },
+    {
+        "value": "Remote control",
+        "details": "A target within spitting range must obey a single command. You will forever hear their wordless voice faintly echo in your mind."
+    },
+    {
+        "value": "Swarm trip",
+        "details": "Your mind is transferred to a flying swarm of bacteria for 10 minutes. You can move through any crack or hole, and you can see whatever the swarm sees but not hear or interact with anything. If your body is killed or if you are not back at your body when the 10 minutes are up, you are stuck in the swarm forever."
+    }
+]

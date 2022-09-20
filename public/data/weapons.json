@@ -1,0 +1,50 @@
+[
+    {
+        "value": "Broken bottle",
+        "details": "d3 Optionally: shiv, brick, sharpened femur bone."
+    },
+    {
+        "value": "Machete",
+        "details": "d6"
+    },
+    {
+        "value": "Throwing knives",
+        "details": "d4 Two attacks / round"
+    },
+    {
+        "value": "Ancient Revolver",
+        "details": "d8"
+    },
+    {
+        "value": "SmartGun™",
+        "details": "d6a / d10a with SmartJack™"
+    },
+    {
+        "value": "Two small SMGs",
+        "details": "d6a Only autofire"
+    },
+    {
+        "value": "Shotgun",
+        "details": "d8"
+    },
+    {
+        "value": "Monosword",
+        "details": "d8"
+    },
+    {
+        "value": "Assault rifle",
+        "details": "d8a"
+    },
+    {
+        "value": "...with a grenade launcher",
+        "details": "d6 Up to d3 targets"
+    },
+    {
+        "value": "Pulse Rifle",
+        "details": "d10a"
+    },
+    {
+        "value": "Sniper rifle",
+        "details": "2d10 x3 crit damage. Whan aiming for 2 rounds: -4DR and +2 damage"
+    }
+]

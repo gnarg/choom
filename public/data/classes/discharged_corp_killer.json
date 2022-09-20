@@ -1,0 +1,69 @@
+{
+    "name": "Discharged Corp Killer",
+    "description": "A good soldier in bad company, always fifighting someone else’s war in the name of greed. Capitalism crushed your enthusiasm quickly enough, and you were discharged without severance.",
+    "hp": "1-8",
+    "glitches": "1-2",
+    "abilities": {
+        "agility": "0",
+        "knowledge": "-1",
+        "presence": "-1",
+        "strength": "0",
+        "toughness": "+2"
+    },
+    "special": "Autofire is always -1DR",
+    "weapon": "0-11",
+    "armor": "1-4",
+    "debt": "3d6",
+    "flavor": {
+        "description": "Your deployment",
+        "values": [
+            {
+                "value": "Urban infiltration in Cy Central. You know the area well."
+            },
+            {
+                "value": "Orbital station grunt. Zero-G wall breaches and airlock executions were your idea of fun."
+            },
+            {
+                "value": "Maritime raider. Blowing up drilling rigs, underwater labs and the occasional ship."
+            },
+            {
+                "value": "Mobile wasteland rig corps. Mowing down roadrunners, sabotaging rival infrastructure, burning what little nature was left."
+            },
+            {
+                "value": "Periglacial SecCorp. Plundering released gas and bioweapons for your employer."
+            },
+            {
+                "value": "Didn’t get that far. Washed out."
+            }
+        ]
+    },
+    "bonus": {
+        "description": "You took something from you employer",
+        "values": [
+            {
+                "value": "Old school heavy machine gun",
+                "details": "d12a damage, but breaks down after a damage roll of 1. You can fix it if you get 10 minutes of quiet time."
+            },
+            {
+                "value": "Prototype Smart™ assault rifle",
+                "details": "d10a damage. Around- the-corner shooting, camera sight, grenade launcher, the works."
+            },
+            {
+                "value": "Toughness+5 hand grenades and 5 flashbangs.",
+                "details": "You throw grenades with -2DR."
+            },
+            {
+                "value": "Heavy laser cannon",
+                "details": "d12 damage, Presence DR14 against people, bots and animals. 3d12 damage, Presence DR10 against vehicles, turrets or similar targets."
+            },
+            {
+                "value": "Crowd-control air cannon",
+                "details": "d6 damage, can hit up to d3 targets close to each other."
+            },
+            {
+                "value": "Incendiary shotgun",
+                "details": "d10 damage and test Agility DR12 or flammable materials are ignited for +d6 damage the following round."
+            }
+        ]
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "name": "Forsaken Gang Goon",
+    "description": "You ran with the only gang to have your back and treat you like more than slum trash. They were your family, and you bled, stole, fought and killed for them. They’re gone now, so you have to keep your edge.",
+    "hp": "1-6",
+    "glitches": "1-3",
+    "abilities": {
+        "agility": "0",
+        "knowledge": "0",
+        "presence": "0",
+        "strength": "-2",
+        "toughness": "0"
+    },
+    "weapon": "0–5",
+    "armor": "0-1",
+    "debt": "3d6",
+    "special": "All Presence and Agility tests are -2DR.",
+    "flavor": {
+        "description": "Your gang",
+        "values": [
+            {
+                "value": "was taken out by a rival gang. They think you are dead too."
+            },
+            {
+                "value": "got hauled off. Cops thought you were just a punk kid. Nobody ratted you out."
+            },
+            {
+                "value": "betrayed you. Left you for dead in the gutter. They don’t know you survived."
+            },
+            {
+                "value": "wandered off into G0 with a newfound religious fervor. They left you and a few other skeptics behind."
+            },
+            {
+                "value": "broke the only rules that separate a criminal from a monster. You left on bad terms."
+            },
+            {
+                "value": "threw you out for breaking the code. They’ll kill you if they see you again."
+            }
+        ]
+    },
+    "bonus": {
+        "description": "Your specialy was",
+        "values": [
+            {
+                "value": "HITS",
+                "details": "When attacking from surprise, test Agility DR10. On a success, you hit once with a melee weapon, dealing normal damage +3."
+            },
+            {
+                "value": "BRAWLS",
+                "details": "Test Agility DR14 to sucker punch an opponent in melee. Deal normal damage and give all allies -2DR on their next attack against the same enemy."
+            },
+            {
+                "value": "BnE",
+                "details": "You have a talent for opening doors and getting inside buildings. Test Agility DR10 to pick any mechanical lock or Knowledge DR10 for any electronic lock. You begin with toolsets for both mechanical and electronic lockpicking."
+            },
+            {
+                "value": "FENCING",
+                "details": "You know potential buyers for almost anything. Once per day, you can test Presence DR12 to remember the name of a person in Cy who might be willing and able to buy whatever illicit goods have fallen into your hands."
+            },
+            {
+                "value": "CLEANUP",
+                "details": "You know how to clean up evidence from a crime scene. Start with two DNA bombs and a large bottle of acid."
+            },
+            {
+                "value": "ASSAULTS",
+                "details": "You always liked it old school: both hands raised, running straight at the enemy. Whatever weapon you begin with, you start with one for each hand. You can use it to make a second attack each round at DR14."
+            }
+        ]
+    }
+}

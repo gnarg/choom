@@ -1,0 +1,82 @@
+[
+    {
+        "value": "Retracting cyberclaws",
+        "details": "Mollies or Logans, d6 damage."
+    },
+    {
+        "value": "Mule pocket",
+        "details": "Big enough for a SmartGun™."
+    },
+    {
+        "value": "Subdermal shockers",
+        "details": "d4 damage to anyone grabbing or hitting you in melee. +2DR to avoid electrical damage."
+    },
+    {
+        "value": "Autocamo",
+        "details": "Subdermal projection of ever-changing anti-facial-recognition patterns."
+    },
+    {
+        "value": "Additional joints",
+        "details": "-2DR to all grapple-related tests, able to fit into small spaces." 
+    },
+    {
+        "value": "Buzzeyes",
+        "details": "Fly-like eyes with 360-vision capabilities."
+    },
+    {
+        "value": "Strangler",
+        "details": "Filament wire hidden in a finger, d6 damage each round when grappling."
+    },
+    {
+        "value": "Skinhard",
+        "details": "Hardened skin providing -d2 armor."
+    },
+    {
+        "value": "Deserter fangs",
+        "details": "DR10 bite attack, d6 damage. 2-in-6 risk of a free attack against you."
+    },
+    {
+        "value": "SmartJack™",
+        "details": "Enhanced cerebral/RCD-links enabling you to use Smart™-tech (ie SmartGuns™) to its full potential."
+    },
+    {
+        "value": "Muscle-ups",
+        "details": "+1 on tests of raw strength such as crushing, lifting, pulling. +4 carrying capacity."
+    },
+    {
+        "value": "PulseWires",
+        "details": "+1 Agility, Presence, Strength, or Toughness for 2 hours. Each Pulse costs 75¤."
+    },
+    {
+        "value": "BodyGun",
+        "details": "Hidden, single shot, large-caliber gun, 2d10 damage."
+    },
+    {
+        "value": "Taurs",
+        "details": "Horns, d4 damage."
+    },
+    {
+        "value": "Sonic blaster",
+        "details": "Deafening sonic wave hitting up to d3 targets for d6 damage. Recharges automatically after 6 hours."
+    },
+    {
+        "value": "Handy bot",
+        "details": "Detachable drone hand with a 50m range."
+    },
+    {
+        "value": "Smarthair",
+        "details": "Change hairstyle at will."
+    },
+    {
+        "value": "Skinslot",
+        "details": "Extra App slot for your deck, hidden beneath your skin."
+    },
+    {
+        "value": "Skeleplating",
+        "details": "Skeleton covered in a thin metal layer, +10 HP."
+    },
+    {
+        "value": "Brainbox",
+        "details": "Black box for your brain. As long as it remains intact at the point of death, the user’s mind can be restarted in another brainbox. Cloning or otherwise getting a new body comes with additional costs and is highly illegal unless you already are rich beyond the reach of the law."
+    }
+]

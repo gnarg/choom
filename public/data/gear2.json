@@ -1,0 +1,49 @@
+[
+    {
+        "value": "Red-juice stimjector",
+        "details": "d4 doses, heals d10 HP"
+    },
+    {
+        "value": "Adrenachrom_HST",
+        "details": "d3 doses. Heals d6 HP, +1 on all abilities for d6 rounds, then -1 until rest"
+    },
+    {
+        "value": "Drone suit",
+        "details": "Slow but quiet flight. Attack and defense tests are +4DR while flying"
+    },
+    {
+        "value": "Small but jailbroken Robo-K9",
+        "details": "d6+2 HP, bite d4, only obeys you*"
+    },
+    {
+        "value": "Tiny surveillance drone",
+        "details": "300m range"
+    },
+    {
+        "value": "Optic camo suit"
+    },
+    {
+        "value": "Noisemaker",
+        "details": "Floods 20mm area with fake data for d4 minutes, making remote communication and surveillance impossible"
+    },
+    {
+        "value": "Fake ID",
+        "details": "Good enough to pass a random check, might not work if they are looking for you"
+    },
+    {
+        "value": "Visionvisor",
+        "details": "Zoom, camera, heat/night vision, ultrasound"
+    },
+    {
+        "value": "Random cybertech",
+        "lookup": "cybertech:0-9"
+    },
+    {
+        "value": "Cyberdeck",
+        "details": "with d3 slots and 2 random apps"
+    },
+    {
+        "value": "A random Nano power",
+        "lookup": "nano-powers:0-11"
+    }
+]

@@ -1,0 +1,69 @@
+{
+    "name": "Burned Hacker",
+    "description": "/.You were one of the sharpest deckers in Cy. No one could use tech or warp the world with an App like you could. @@@@@@@@@@@@.&_ /.You don’t know what went wrong. You messed up. Maybe you were tricked; maybe you got sloppy. /.You glimpsed a terrible truth, and now you’re burnt. ///////////// No collective, no fallback, nothing.",
+    "hp": "1-6",
+    "glitches": "1-2",
+    "abilities": {
+        "agility": "0",
+        "knowledge": "+2",
+        "presence": "0",
+        "strength": "-1",
+        "toughness": "-1"
+    },
+    "special": "Start with a cyberdeck with Knowledge+4 slots and a random App, any starting Nano or Cybertech is replaced with a random App",
+    "weapon": "0-7",
+    "armor": "0-1",
+    "debt": "6d10",
+    "flavor": {
+        "description": "You've found a terrible truth.",
+        "values": [
+            {
+                "value": "The public faces of the UCS board are fabricated. They don't exist. Who's running the UCS?"
+            },
+            {
+                "value": "Stealth carrier drones are offloading large amounts of something in G0 on rainy nights."
+            },
+            {
+                "value": "Rogue AI are flocking to Cy, more so than than anywhere else in the world."
+            },
+            { 
+                "value": "Nanobacteria is seeping into the Net. What does that even mean? Who’s covering it up?"
+            },
+            {
+                "value": "Two AIs have merged into a two-headed sentience. Its intelligence is beyond our comprehension."
+            },
+            {
+                "value": "An unknown collective has opened backdoors in Cy’s major data nodes. No hackers have claimed credit."
+            }
+        ]
+    },
+    "bonus": {
+        "description": "You built an App.",
+        "values": [
+            {
+                "value": "Borgtrigga-0.5",
+                "details": "Provoke a Cy-rage test for one nearby target"
+            },
+            {
+                "value": "Law1",
+                "details": "Parallaxes imagery around you, making you invisible to all tech (except true AI) for 10 minutes"
+            },
+            {
+                "value": "Boomboom",
+                "details": "d4 nearby simple devices (lamps, monitors, cameras, etc) explode. d6 damage to up to d4 targets"
+            },
+            {
+                "value": "CopySwappy",
+                "details": "For d10 rounds, all tech will mistake you for another person within 30m and vice versa"
+            },
+            {
+                "value": "tError",
+                "details": "Target's RCD renders subliminal, personalized nightmare imagery that distorts reality. Test Presence DR14 or unable to act for d4 rounds"
+            },
+            {
+                "value": "DvG-sling",
+                "details": "Deal damage to cybered target or drone/vehicle/mech based on their size. Dog-sized targets take d6 damage, human d10, car 2d8, and larger targets take 2d12"
+            }
+        ]
+    }
+}
