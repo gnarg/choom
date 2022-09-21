@@ -1,25 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-/* ability probabilities
-+1
-0.46  -3
-4.62  -2
-16.2  -1
-62.5   0
-83.79 +1
-95.37 +2
-100.0 +3
-
-+2
-1.85  -2
-9.25  -1
-50.0   0
-74.07 +1
-90.74 +2
-100.0 +3
- */
+import { useTable } from 'react-table';
 
 // Stuff
 // 2d6 * 10 creds
@@ -130,9 +112,6 @@ function rollAbility(bonus: string) {
       if (p < 90.74) return "+2";
       return "+3";
   }
-
-  // consult the table for the bonus
-  // return the value
 }
 
 type Klass = {
