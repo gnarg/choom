@@ -3,32 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 
 /* ability probabilities
--2
-9.25  -3
-25.92 -2
-50.0  -1
-90.74  0
-98.14 +1
-100.0 +2
-
--1
-4.62 -3
-16.2 -2
-37.5 -1
-83.79 0
-95.37 +1
-99.53 +2
-100.0 +3
-
-0
-1.85  -3
-9.25  -2
-25.92 -1
-74.07  0
-90.74 +1
-98.14 +2
-100.0 +3
-
 +1
 0.46  -3
 4.62  -2
@@ -67,20 +41,111 @@ type TableValue = {
 
 class Table {
   values: TableValue[];
+  description?: string;
 
   constructor(values: TableValue[]) {
     this.values = values;
   }
 
-  lookup(min=0, max=this.values.length): TableValue {
+  lookup(min=0, max=this.values.length) {
     let index = Math.floor(Math.random() * (max - min + 1) + min);
     return this.values[index];
   }
 }
 
+// class Rnd {
+//   value: number
+
+//   constructor(range: string) {
+//     let regex = /^(\d+)\-(\d+)$/
+//     let groups = regex.exec(range);
+//     let min = groups?[0][0] : 0;
+//     let max = groups?[1][0] : 0;
+
+//     this.value = Math.floor(Math.random() * (max - min + 1) + min);
+//   }
+// }
+
+function roll(range: string) {
+  let regex = /^(\d+)-(\d+)$/;
+  let groups = regex.exec(range);
+  let min = groups?[1][0] : 0;
+  let max = groups?[2][0] : 0;
+
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// function randomValue(min: number, max: number) {
+
+// }
+
+type Abilities = {
+  agility: string;
+  knowledge: string;
+  presence: string;
+  strength: string;
+  toughness: string;
+}
+
+function rollAbility(bonus: string) {
+  let p = Math.random() * 100;
+
+  switch(bonus) {
+    case("-2"):
+      if (p < 9.25) return "-3";
+      if (p < 25.92) return "-2";
+      if (p < 50.0) return "-1";
+      if (p < 90.74) return "0";
+      if (p < 98.14) return "+1";
+      return "+2";
+    case("-1"):
+      if (p < 4.62) return "-3";
+      if (p < 16.2) return "-2";
+      if (p < 37.5) return "-1";
+      if (p < 83.79) return "0";
+      if (p < 95.37) return "+1";
+      if (p < 99.53) return "+2";
+      return "+3";
+    case("0"):
+      if (p < 1.85) return "-3";
+      if (p < 9.25) return "-2";
+      if (p < 25.92) return "-1";
+      if (p < 74.07) return "0";
+      if (p < 90.74) return "+1";
+      if (p < 98.14) return "+2";
+      return "+3";
+    case("+1"):
+      if (p < 0.46) return "-3";
+      if (p < 4.62) return "-2";
+      if (p < 16.2) return "-1";
+      if (p < 62.5) return "0";
+      if (p < 83.79) return "+1";
+      if (p < 95.37) return "+2";
+      return "+3";
+    case("+2"):
+      if (p < 1.85) return "-2";
+      if (p < 9.25) return "-1";
+      if (p < 50.0) return "0";
+      if (p < 74.07) return "+1";
+      if (p < 90.74) return "+2";
+      return "+3";
+  }
+
+  // consult the table for the bonus
+  // return the value
+}
+
 type Klass = {
   name: string;
-  description: string;
+  description?: string;
+  glitches: string;
+  abilities: Abilities;
+  special: string;
+  weapon: string;
+  armor: string;
+  debt: string;
+  flavor: Table;
+  bonus: Table;
 }
 
 async function getKlass(): Promise<Klass> {
@@ -116,6 +181,9 @@ function App() {
           </p>
           <p>
             {klass.description}
+          </p>
+          <p>
+            {roll(klass.glitches)}
           </p>
           <a
             className="App-link"
