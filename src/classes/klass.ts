@@ -7,9 +7,11 @@ import obsessions from '../tables/obsessions.json';
 import gear0 from '../tables/gear0.json';
 import gear1 from '../tables/gear1.json';
 import gear2 from '../tables/gear2.json';
+import names from '../tables/names.json';
 
 export default abstract class BaseKlass {
-    abstract name: string;
+    abstract klass: string;
+    name = new Table(names).lookup().value + ' ' + new Table(names).lookup().value;
     description?: string;
     abstract agility: number;
     abstract knowledge: number;
@@ -23,22 +25,18 @@ export default abstract class BaseKlass {
     bonusDescription?: string;
     bonus?: TableValue;
     glitches = this.roll(2);
-    gear = [
+    stuff = [
       new Table(gear0).lookup(),
       new Table(gear1).lookup(),
       new Table(gear2).lookup(),
     ];
-    apps?: TableValue[];
-    cybertech?: TableValue[];
-    nanoPowers?: TableValue[];
-    infestations?: TableValue[];
-    feature = new Table(features).lookup();
-    style = new Table(styles).lookup();
-    quirk = new Table(quirks).lookup();
-    wants = new Table(wants).lookup();
-    obsession = new Table(obsessions).lookup();
+    feature = new Table(features).lookup().value;
+    style = new Table(styles).lookup().value;
+    quirk = new Table(quirks).lookup().value;
+    wants = new Table(wants).lookup().value;
+    obsession = new Table(obsessions).lookup().value;
     credits = (this.roll(6) + this.roll(6)) * 10;
-    debt = (this.roll(6) + this.roll(6) + this.roll(6)) + 1000;
+    debt = (this.roll(6) + this.roll(6) + this.roll(6)) * 1000;
 
     rollAbility(bonus=0) {
       const p = Math.random() * 100;
@@ -87,5 +85,9 @@ export default abstract class BaseKlass {
 
     roll(max:number, min=1) {
       return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+    }
+
+    equipment(kind: string) {
+        return this.stuff.filter(item => item.kind === kind);
+    }
 }

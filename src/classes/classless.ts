@@ -4,7 +4,7 @@ import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
 
 export default class Classless extends Klass {
-    name = "Street Punk";
+    klass = "Street Punk";
     agility = this.rollAbility();
     knowledge = this.rollAbility();
     presence = this.rollAbility();
@@ -14,9 +14,11 @@ export default class Classless extends Klass {
 
     constructor() {
         super()
-        this.gear = this.gear.concat([
+        this.stuff = this.stuff.concat([
             new Table(weapons).lookup(11),
             new Table(armor).lookup(2),
         ]);
+
+        // TODO reroll two random abilities with +2
     }
 }

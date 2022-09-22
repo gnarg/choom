@@ -6,7 +6,7 @@ import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
 
 export default class ShunnedNano extends Klass {
-    name = "Shunned Nano";
+    klass = "Shunned Nano";
     description = "It’s inside you. Infesting your brain, warping your flesh. People are afraid of you now. They’re afraid of the power that poisons you. You’re scared too.";
     agility = this.rollAbility();
     knowledge = this.rollAbility();
@@ -14,12 +14,6 @@ export default class ShunnedNano extends Klass {
     strength = this.rollAbility();
     toughness = this.rollAbility(-2);
     hp = this.roll(4) + this.toughness;
-    nanoPowers = [
-        new Table(nanos).lookup(),
-    ];
-    infestations = [
-        new Table(infestations).lookup(),
-    ]
     flavorDescription = "You got infected when";
     flavor = new Table(
         [
@@ -75,9 +69,12 @@ export default class ShunnedNano extends Klass {
 
     constructor() {
         super()
-        this.gear = this.gear.concat([
+        this.stuff = this.stuff.concat([
             new Table(weapons).lookup(5),
             new Table(armor).lookup(1),
+            new Table(nanos, 'nano').lookup(),
+            new Table(infestations, 'infestation').lookup(),
+            this.bonus
         ])
 
         // TODO replace any apps or cybertech with more nanos

@@ -6,13 +6,16 @@ export type TableValue = {
     value: string;
     details?: string;
     ref?: string;
+    kind?: string;
 }
 
 export default class Table {
     values: TableValue[];
+    kind: string;
 
-    constructor(values: TableValue[]) {
+    constructor(values: TableValue[], kind="gear") {
         this.values = values;
+        this.kind = kind;
     }
 
     lookup(max=this.values.length): TableValue {
@@ -21,10 +24,13 @@ export default class Table {
             cybertech,
             nano_powers,
         }
-        const table_value = this.values[Math.floor(Math.random() * (max + 1))];
+        const table_value = this.values[Math.floor(Math.random() * max)];
+        table_value.kind = this.kind;
         if (table_value.ref) {
             const [table_name, max] = table_value.ref.split(":");
-            return new Table(tables[table_name]).lookup(parseInt(max));
+            const value = new Table(tables[table_name]).lookup(parseInt(max));
+            value.kind = table_name;
+            return value;
         }
         return table_value;
     }

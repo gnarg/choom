@@ -5,7 +5,7 @@ import apps from '../tables/apps.json';
 import Klass from './klass';
 
 export default class BurnedHacker extends Klass {
-    name = "Burned Hacker";
+    klass = "Burned Hacker";
     description = "/.You were one of the sharpest deckers in Cy. No one could use tech or warp the world with an App like you could. @@@@@@@@@@@@.&_ /.You don’t know what went wrong. You messed up. Maybe you were tricked; maybe you got sloppy. /.You glimpsed a terrible truth, and now you’re burnt. ///////////// No collective, no fallback, nothing.";
     agility = this.rollAbility();
     knowledge = this.rollAbility(2);
@@ -14,9 +14,6 @@ export default class BurnedHacker extends Klass {
     toughness = this.rollAbility(-1);
     hp = this.roll(6) + this.toughness;
     special = "any starting Nano or Cybertech is replaced with a random App"
-    apps = [
-        new Table(apps).lookup()
-    ]
     flavorDescription = "You've found a terrible truth";
     flavor = new Table(
         [
@@ -73,13 +70,16 @@ export default class BurnedHacker extends Klass {
 
     constructor() {
         super();
-        this.gear = this.gear.concat([
+        this.stuff = this.stuff.concat([
             new Table(weapons).lookup(7),
             new Table(armor).lookup(2),
             {
                 value: "Cyberdeck",
-                details: this.knowledge + 4 + " slots"
-            }
+                details: this.knowledge + 4 + " slots",
+                kind: "gear"
+            },
+            new Table(apps, 'app').lookup(),
+            this.bonus,
         ]);
 
         // TODO if gear has any cyberwear or nanos, replace with apps

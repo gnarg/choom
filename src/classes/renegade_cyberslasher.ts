@@ -5,7 +5,7 @@ import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
 
 export default class RenegadeCyberslasher extends Klass {
-    name = "Renegade Cyberslasher";
+    klass = "Renegade Cyberslasher";
     description = "You are DEATH incarnate — a frenzied flurry of chrome, murder and blood-stained steel. But yours is no mindless rage. You match your trained and cybernetically enhanced body with an equally disciplined mind. You used to kill for a cause, for an ideal. Now? You kill for money.";
     agility = this.rollAbility();
     knowledge = this.rollAbility(-2);
@@ -13,9 +13,6 @@ export default class RenegadeCyberslasher extends Klass {
     strength = this.rollAbility(1);
     toughness = this.rollAbility();
     hp = this.roll(10) + this.toughness;
-    cybertech = [
-        new Table(cybertech).lookup(11),
-    ]
     flavorDescription = "You start each day with";
     flavor = new Table(
         [
@@ -71,11 +68,13 @@ export default class RenegadeCyberslasher extends Klass {
 
     constructor() {
         super();
-        this.gear = this.gear.concat([
-            new Table(weapons).lookup(11),
+        this.stuff = this.stuff.concat([
+            new Table(weapons, 'weapon').lookup(11),
             new Table(armor).lookup(2),
+            new Table(cybertech, 'cybertech').lookup(11),
+            this.bonus,
         ])
 
-        // TODO replace apps or nanos in gear with more cybertech
+        // TODO replace apps or nanos in gear with cybertech:12
     }
 }

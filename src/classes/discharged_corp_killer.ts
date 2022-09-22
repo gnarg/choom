@@ -4,7 +4,7 @@ import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
 
 export default class DischargedCorpKiller extends Klass {
-    name = "Discharged Corp Killer";
+    klass = "Discharged Corp Killer";
     description = "A good soldier in bad company, always fighting someone else’s war in the name of greed. Capitalism crushed your enthusiasm quickly enough, and you were discharged without severance.";
     agility = this.rollAbility();
     knowledge = this.rollAbility(-1);
@@ -68,10 +68,11 @@ export default class DischargedCorpKiller extends Klass {
 
     constructor() {
         super();
-        this.gear = this.gear.concat(
+        this.stuff = this.stuff.concat(
             [
                 new Table(weapons).lookup(11),
                 new Table(armor).lookup(4),
+                this.bonus,
             ]
         )
 

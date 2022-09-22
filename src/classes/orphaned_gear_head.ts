@@ -1,17 +1,17 @@
 import Table from "../tables/table";
-import Klass, { roll, rollAbility } from "./klass";
+import Klass from "./klass";
 import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
 
 export default class OrphanedGearHead extends Klass {
-    name = "Orphaned Gear Head";
+    klass = "Orphaned Gear Head";
     description = "People are unreliable. Socially. Physically. Emotionally. Weak bodies and weaker wills. They are worn down, unfixable. Instead, you have mastered emotionless steel and loyal code. You can fix, drive and pilot any machine. Machines, you can trust.";
-    agility = rollAbility();
-    knowledge = rollAbility(2);
-    presence = rollAbility(-2);
-    strength = rollAbility();
-    toughness = rollAbility();
-    hp = roll(8) + this.toughness;
+    agility = this.rollAbility();
+    knowledge = this.rollAbility(2);
+    presence = this.rollAbility(-2);
+    strength = this.rollAbility();
+    toughness = this.rollAbility();
+    hp = this.roll(8) + this.toughness;
     special = "You test Knowledge DR10 when you try to repair a piece of tech or to pilot a vehicle, drone or other machine.";
     flavorDescription = "You trusted them, and then they";
     flavor = new Table(
@@ -68,9 +68,10 @@ export default class OrphanedGearHead extends Klass {
 
     constructor() {
         super();
-        this.gear = this.gear.concat([
+        this.stuff = this.stuff.concat([
             new Table(weapons).lookup(11),
             new Table(armor).lookup(2),
+            this.bonus,
         ]);
     }
 }

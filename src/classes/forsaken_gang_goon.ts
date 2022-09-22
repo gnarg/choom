@@ -4,7 +4,7 @@ import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
 
 export default class ForsakenGangGoon extends Klass  {
-    name = "Forsaken Gang Goon";
+    klass = "Forsaken Gang Goon";
     description = "You ran with the only gang to have your back and treat you like more than slum trash. They were your family, and you bled, stole, fought and killed for them. They’re gone now, so you have to keep your edge.";
     agility = this.rollAbility();
     knowledge = this.rollAbility();
@@ -69,7 +69,7 @@ export default class ForsakenGangGoon extends Klass  {
 
     constructor() {
         super();
-        this.gear = this.gear.concat([
+        this.stuff = this.stuff.concat([
             new Table(weapons).lookup(5),
             new Table(armor).lookup(1),
         ]);
