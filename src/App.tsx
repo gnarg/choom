@@ -17,21 +17,13 @@ import { TableValue } from './tables/table';
 function GearTable(props: {name: string, values: TableValue[]} ) {
   if (props.values.length > 0) {
     return (
-      // <Container>
-      //   <Row><Col>{props.name}</Col></Row>
-      //   {
-      //     props.values.map((item) => (
-      //       <Row><Col>{item.value}</Col><Col xs={9}>{item.details}</Col></Row>
-      //     ))
-      //   }
-      // </Container>
       <Container>
       <p>{props.name}</p>
       <Table striped bordered variant="dark" size="sm">
         <tbody>
         {
           props.values.map(item => (
-            <tr><td>{item.value}</td><td>{item.details}</td></tr>
+            <tr key={item.value}><td>{item.value}</td><td>{item.details}</td></tr>
           ))
         }
         </tbody>
@@ -62,8 +54,8 @@ function App() {
     OrphanedGearHead,
     RenegadeCyberslasher,
     ShunnedNano
-  ].sort(() => Math.random() - 0.5);
-  const character = new classes[0]();
+  ];
+  const character = new classes[Math.floor(Math.random() * classes.length)]();
 
   return (
     <div className="App">
