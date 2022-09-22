@@ -13,26 +13,26 @@ export default class ForsakenGangGoon extends Klass  {
     toughness = this.rollAbility();
     hp = this.roll(6) + this.toughness;
     glitches = this.roll(3);
-    special = "All Presence and Agility tests are -2DR.";
+    special = "Stealthy, all Presence and Agility tests are -2DR."
     flavor = "Your gang " + new Table(
         [
             {
-                "value": "was taken out by a rival gang. They think you are dead too."
+                value: "was taken out by a rival gang. They think you are dead too."
             },
             {
-                "value": "got hauled off. Cops thought you were just a punk kid. Nobody ratted you out."
+                value: "got hauled off. Cops thought you were just a punk kid. Nobody ratted you out."
             },
             {
-                "value": "betrayed you. Left you for dead in the gutter. They don’t know you survived."
+                value: "betrayed you. Left you for dead in the gutter. They don’t know you survived."
             },
             {
-                "value": "wandered off into G0 with a newfound religious fervor. They left you and a few other skeptics behind."
+                value: "wandered off into G0 with a newfound religious fervor. They left you and a few other skeptics behind."
             },
             {
-                "value": "broke the only rules that separate a criminal from a monster. You left on bad terms."
+                value: "broke the only rules that separate a criminal from a monster. You left on bad terms."
             },
             {
-                "value": "threw you out for breaking the code. They’ll kill you if they see you again."
+                value: "threw you out for breaking the code. They’ll kill you if they see you again."
             }
         ]
     ).lookup().value;

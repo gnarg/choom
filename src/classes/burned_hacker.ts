@@ -13,7 +13,6 @@ export default class BurnedHacker extends Klass {
     strength = this.rollAbility(-1);
     toughness = this.rollAbility(-1);
     hp = this.roll(6) + this.toughness;
-    special = "any starting Nano or Cybertech is replaced with a random App"
     flavor = "You've found a terrible truth: " + new Table(
         [
             {

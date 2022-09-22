@@ -12,7 +12,7 @@ export default class DischargedCorpKiller extends Klass {
     strength = this.rollAbility();
     toughness = this.rollAbility(2);
     hp = this.roll(8) + this.toughness;
-    special = "Autofire is always -1DR";
+    special = "Autofire is always -1DR. The Corp wants you dead.";
     flavor = "Your deployment: " + new Table(
         [
             {

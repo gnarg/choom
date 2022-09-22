@@ -1,5 +1,6 @@
 // import React, { useState, useEffect } from 'react';
 import "@fontsource/chakra-petch";
+import "@fontsource/rubik-glitch"
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -39,7 +40,7 @@ function Specialty(props: {specialty?: TableValue}) {
   if (props.specialty) {
     return (
       <Container>
-        <Row><Col>Your specialty was {props.specialty.value}</Col><Col xs={9}>{props.specialty.details}</Col></Row>
+      <p>Your specialty was <b>{props.specialty.value}</b>: <span>{props.specialty.details}</span></p>
       </Container>
     )
   }
@@ -61,37 +62,36 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Container style={{paddingTop: "1em"}}>
-        <Row>
+      <Container>
+        <Row style={{paddingTop: "1em", paddingBottom: "1em"}}>
           <Col><img src="CompWith_CY_BORG_horiz_small.png" width="450" /></Col>
-          <Col style={{fontSize: 48}}>{character.klass}</Col>
+          <Col style={{fontFamily: 'Rubik Glitch', fontSize: 52, fontWeight: 'bold'}}>{character.klass}</Col>
         </Row>
         <Row>
-          <Col className="label">NAME</Col><Col>{character.name}</Col>
-          <Col className="label">HP</Col><Col>{character.hp < 4 ? 4 : character.hp}</Col>
-        </Row>
-        <Row>
-          <Col className="label">AGILITY</Col><Col>{character.agility}</Col>
-          <Col className="label">G̷l̶i̴t̷c̸h̶e̴s̸</Col><Col>{character.glitches}</Col>
-        </Row>
-        <Row>
-          <Col className="label">KNOWLEDGE</Col><Col>{character.knowledge}</Col>
-          <Col className="label">Style</Col><Col>{character.style}{character.feature}</Col>
-        </Row>
-        <Row>
-          <Col className="label">PRESENCE</Col><Col>{character.presence}</Col>
-          <Col className="label">Obsession</Col><Col>{character.obsession}</Col>
-        </Row>
-        <Row>
-          <Col className="label">STRENGTH</Col><Col>{character.strength}</Col>
-          <Col className="label">Credits</Col><Col>{character.credits}¤</Col>
-        </Row>
-        <Row>
-          <Col className="label">TOUGHNESS</Col><Col>{character.toughness}</Col>
-          <Col className="label">Debt</Col><Col>{character.debt}¤</Col>
+          <Col>
+            <Container>
+              <Row><Col className="label">NAME</Col><Col xs={7}>{character.name}</Col></Row>
+              <Row><Col className="label">AGILITY</Col><Col xs={7}>{character.agility}</Col></Row>
+              <Row><Col className="label">KNOWLEDGE</Col><Col xs={7}>{character.knowledge}</Col></Row>
+              <Row><Col className="label">PRESENCE</Col><Col xs={7}>{character.presence}</Col></Row>
+              <Row><Col className="label">STRENGTH</Col><Col xs={7}>{character.strength}</Col></Row>
+              <Row><Col className="label">TOUGHNESS</Col><Col xs={7}>{character.toughness}</Col></Row>
+            </Container>
+          </Col>
+          <Col>
+            <Container>
+              <Row><Col className="label">HP</Col><Col xs={7}>{character.hp < 4 ? 4 : character.hp}</Col></Row>
+              <Row><Col className="label">G̷l̶i̴t̷c̸h̶e̴s̸</Col><Col xs={7}>{character.glitches}</Col></Row>
+              <Row><Col className="label">Style</Col><Col xs={7}>{character.style}{character.feature}</Col></Row>
+              <Row><Col className="label">Obsession</Col><Col xs={7}>{character.obsession}</Col></Row>
+              <Row><Col className="label">Credits</Col><Col xs={7}>{character.credits}¤</Col></Row>
+              <Row><Col className="label">Debt</Col><Col xs={7}>{character.debt}¤</Col></Row>
+            </Container>
+          </Col>
         </Row>
         <p style={{fontSize: 'smaller'}}>{character.description}</p>
         <p>{character.flavor}</p>
+        <p style={{backgroundColor: 'magenta', color: 'white'}}>{character.special}</p>
       </Container>
       <Specialty specialty={character.equipment('specialty')[0]} />
       <GearTable name='./GEAR' values={character.equipment('gear')} />
