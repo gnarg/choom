@@ -91,7 +91,7 @@ function App() {
         </Row>
         <p style={{fontSize: 'smaller'}}>{character.description}</p>
         <p>{character.flavor}</p>
-        <p style={{backgroundColor: 'magenta', color: 'white'}}>{character.special}</p>
+        <p style={{backgroundColor: 'magenta', color: 'white', textAlign: 'center'}}>{character.special}</p>
       </Container>
       <Specialty specialty={character.equipment('specialty')[0]} />
       <GearTable name='./GEAR' values={character.equipment('gear')} />
