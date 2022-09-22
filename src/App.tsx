@@ -1,4 +1,5 @@
 // import React, { useState, useEffect } from 'react';
+import "@fontsource/chakra-petch";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -18,7 +19,7 @@ function GearTable(props: {name: string, values: TableValue[]} ) {
   if (props.values.length > 0) {
     return (
       <Container>
-      <p>{props.name}</p>
+      <b style={{ fontSize: "xxx-large"}}>{props.name}</b>
       <Table striped bordered variant="dark" size="sm">
         <tbody>
         {
@@ -61,21 +62,21 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Container>
-        <Row><Col>Name</Col><Col>{character.name}</Col><Col>Class</Col><Col>{character.klass}</Col></Row>
-        <Row><Col>Agility</Col><Col>{character.agility}</Col><Col>HP</Col><Col>{character.hp < 4 ? 4 : character.hp}</Col></Row>
-        <Row><Col>Knowledge</Col><Col>{character.knowledge}</Col><Col>Glitches</Col><Col>{character.glitches}</Col></Row>
-        <Row><Col>Presence</Col><Col>{character.presence}</Col><Col>Credits</Col><Col>{character.credits}</Col></Row>
-        <Row><Col>Strength</Col><Col>{character.strength}</Col><Col>Debt</Col><Col>{character.debt}</Col></Row>
-        <Row><Col>Toughness</Col><Col>{character.toughness}</Col><Col>Style</Col><Col>{character.style}{character.feature}</Col></Row>
-        <p>{character.description}</p>
+        <Row><Col className="label">NAME</Col><Col>{character.name}</Col><Col className="label">Class</Col><Col>{character.klass}</Col></Row>
+        <Row><Col className="label">AGILITY</Col><Col>{character.agility}</Col><Col className="label">HP</Col><Col>{character.hp < 4 ? 4 : character.hp}</Col></Row>
+        <Row><Col className="label">KNOWLEDGE</Col><Col>{character.knowledge}</Col><Col className="label">Glitches</Col><Col>{character.glitches}</Col></Row>
+        <Row><Col className="label">PRESENCE</Col><Col>{character.presence}</Col><Col className="label">Credits</Col><Col>{character.credits}</Col></Row>
+        <Row><Col className="label">STRENGTH</Col><Col>{character.strength}</Col><Col className="label">Debt</Col><Col>{character.debt}</Col></Row>
+        <Row><Col className="label">TOUGHNESS</Col><Col>{character.toughness}</Col><Col className="label">Style</Col><Col>{character.style}{character.feature}</Col></Row>
+        <p style={{fontSize: 'smaller'}}>{character.description}</p>
         <p>{character.flavor}</p>
       </Container>
       <Specialty specialty={character.equipment('specialty')[0]} />
-      <GearTable name='Gear' values={character.equipment('gear')} />
-      <GearTable name='CyberTech' values={character.equipment('cybertech')} />
-      <GearTable name='Nano-Powers' values={character.equipment('nano')} />
-      <GearTable name='Infestations' values={character.equipment('infestation')} />
-      <GearTable name='Apps' values={character.equipment('app')} />
+      <GearTable name='./GEAR' values={character.equipment('gear')} />
+      <GearTable name='./CYBERTECH' values={character.equipment('cybertech')} />
+      <GearTable name='./NANOS' values={character.equipment('nano')} />
+      <GearTable name='./INFESTATIONS' values={character.equipment('infestation')} />
+      <GearTable name='./APPS' values={character.equipment('app')} />
       </header>
 
     </div>
