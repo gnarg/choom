@@ -28,7 +28,7 @@ export default class RenegadeCyberslasher extends Klass {
                 "value": "obsessively laying out your clothes and cleaning your gear."
             },
             {
-                "value": "doing a recreational blood transfusion."
+                "value": "a recreational blood transfusion."
             },
             {
                 "value": "strengthening your inner daemon through a chaos magick ritual."

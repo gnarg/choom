@@ -47,6 +47,10 @@ export default class Table {
         }
         const table_value = this.values[Math.floor(Math.random() * max)];
         table_value.kind = this.kind;
+        if (table_value.value === "Cyberdeck") {
+            // try again, disallow this one for now
+            return new Table(this.values).lookup();
+        }
         if (table_value.ref) {
             const [table_name, max] = table_value.ref.split(":");
             const value = new Table(tables[table_name]).lookup(parseInt(max));

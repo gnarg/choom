@@ -72,7 +72,7 @@ function App() {
         </Row>
         <Row>
           <Col className="label" xs={2}>AGILITY</Col><Col>{character.agility}</Col>
-          <Col className="label" xs={2}>Glitches</Col><Col>{character.glitches}</Col>
+          <Col className="label" xs={2}>G̷l̶i̴t̷c̸h̶e̴s̸</Col><Col>{character.glitches}</Col>
         </Row>
         <Row>
           <Col className="label" xs={2}>KNOWLEDGE</Col><Col>{character.knowledge}</Col>
