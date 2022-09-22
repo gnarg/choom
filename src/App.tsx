@@ -67,28 +67,28 @@ function App() {
           <Col style={{fontSize: 48}}>{character.klass}</Col>
         </Row>
         <Row>
-          <Col className="label" xs={2}>NAME</Col><Col>{character.name}</Col>
-          <Col className="label" xs={2}>HP</Col><Col>{character.hp < 4 ? 4 : character.hp}</Col>
+          <Col className="label">NAME</Col><Col>{character.name}</Col>
+          <Col className="label">HP</Col><Col>{character.hp < 4 ? 4 : character.hp}</Col>
         </Row>
         <Row>
-          <Col className="label" xs={2}>AGILITY</Col><Col>{character.agility}</Col>
-          <Col className="label" xs={2}>G̷l̶i̴t̷c̸h̶e̴s̸</Col><Col>{character.glitches}</Col>
+          <Col className="label">AGILITY</Col><Col>{character.agility}</Col>
+          <Col className="label">G̷l̶i̴t̷c̸h̶e̴s̸</Col><Col>{character.glitches}</Col>
         </Row>
         <Row>
-          <Col className="label" xs={2}>KNOWLEDGE</Col><Col>{character.knowledge}</Col>
-          <Col className="label" xs={2}>Style</Col><Col>{character.style}{character.feature}</Col>
+          <Col className="label">KNOWLEDGE</Col><Col>{character.knowledge}</Col>
+          <Col className="label">Style</Col><Col>{character.style}{character.feature}</Col>
         </Row>
         <Row>
-          <Col className="label" xs={2}>PRESENCE</Col><Col>{character.presence}</Col>
-          <Col className="label" xs={2}>Obsession</Col><Col>{character.obsession}</Col>
+          <Col className="label">PRESENCE</Col><Col>{character.presence}</Col>
+          <Col className="label">Obsession</Col><Col>{character.obsession}</Col>
         </Row>
         <Row>
-          <Col className="label" xs={2}>STRENGTH</Col><Col>{character.strength}</Col>
-          <Col className="label" xs={2}>Credits</Col><Col>{character.credits}¤</Col>
+          <Col className="label">STRENGTH</Col><Col>{character.strength}</Col>
+          <Col className="label">Credits</Col><Col>{character.credits}¤</Col>
         </Row>
         <Row>
-          <Col className="label" xs={2}>TOUGHNESS</Col><Col>{character.toughness}</Col>
-          <Col className="label" xs={2}>Debt</Col><Col>{character.debt}¤</Col>
+          <Col className="label">TOUGHNESS</Col><Col>{character.toughness}</Col>
+          <Col className="label">Debt</Col><Col>{character.debt}¤</Col>
         </Row>
         <p style={{fontSize: 'smaller'}}>{character.description}</p>
         <p>{character.flavor}</p>
