@@ -69,14 +69,6 @@ function App() {
       <GearTable name='Nano-Powers' values={character.equipment('nano')} />
       <GearTable name='Infestations' values={character.equipment('infestation')} />
       <GearTable name='Apps' values={character.equipment('app')} />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
 
     </div>

@@ -11,9 +11,22 @@ export type TableValue = {
 
 /*
 TODO handle
+    gear2
     {
         "value": "Cyberdeck",
         "details": "with d3 slots and 2 random apps"
+    }
+
+    gear0
+    {
+        "value": "d4+1 flashbangs",
+        "details": "toughness DR14 or +4DR for d4 rounds"
+    }
+
+    gear0
+    {
+        "value": "d4 hand grenades",
+        "details": "d6 damage to up to d3 targets"
     }
 */
 
