@@ -13,8 +13,7 @@ export default class RenegadeCyberslasher extends Klass {
     strength = this.rollAbility(1);
     toughness = this.rollAbility();
     hp = this.roll(10) + this.toughness;
-    flavorDescription = "You start each day with";
-    flavor = new Table(
+    flavor = "You start each day with " + new Table(
         [
             {
                 "value": "doing yoga and meditation."

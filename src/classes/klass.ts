@@ -20,7 +20,6 @@ export default abstract class BaseKlass {
     abstract toughness: number;
     abstract hp: number;
     special?: string;
-    flavorDescription?: string;
     flavor?: string;
     bonusDescription?: string;
     bonus?: TableValue;

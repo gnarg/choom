@@ -14,8 +14,7 @@ export default class ForsakenGangGoon extends Klass  {
     hp = this.roll(6) + this.toughness;
     glitches = this.roll(3);
     special = "All Presence and Agility tests are -2DR.";
-    flavorDescription = "Your gang";
-    flavor = new Table(
+    flavor = "Your gang " + new Table(
         [
             {
                 "value": "was taken out by a rival gang. They think you are dead too."

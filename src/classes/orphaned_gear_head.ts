@@ -13,8 +13,7 @@ export default class OrphanedGearHead extends Klass {
     toughness = this.rollAbility();
     hp = this.roll(8) + this.toughness;
     special = "You test Knowledge DR10 when you try to repair a piece of tech or to pilot a vehicle, drone or other machine.";
-    flavorDescription = "You trusted them, and then they";
-    flavor = new Table(
+    flavor = "You trusted them, and then they " + new Table(
         [
             {
                 "value": "disappeared in G0 (Looking for an advanced lab rumored to have survived the Incident.)"

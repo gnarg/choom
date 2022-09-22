@@ -14,8 +14,7 @@ export default class BurnedHacker extends Klass {
     toughness = this.rollAbility(-1);
     hp = this.roll(6) + this.toughness;
     special = "any starting Nano or Cybertech is replaced with a random App"
-    flavorDescription = "You've found a terrible truth:";
-    flavor = new Table(
+    flavor = "You've found a terrible truth: " + new Table(
         [
             {
                 "value": "The public faces of the UCS board are fabricated. They don't exist. Who's running the UCS?"

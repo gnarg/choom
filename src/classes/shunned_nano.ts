@@ -14,8 +14,7 @@ export default class ShunnedNano extends Klass {
     strength = this.rollAbility();
     toughness = this.rollAbility(-2);
     hp = this.roll(4) + this.toughness;
-    flavorDescription = "You got infected when";
-    flavor = new Table(
+    flavor = "You got infected when " + new Table(
         [
             {
                 "value": "you spent a wild night with a group of neo-pagan cultists, perfomring profane rites to some snake god."

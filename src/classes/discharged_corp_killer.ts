@@ -13,8 +13,7 @@ export default class DischargedCorpKiller extends Klass {
     toughness = this.rollAbility(2);
     hp = this.roll(8) + this.toughness;
     special = "Autofire is always -1DR";
-    flavorDescription = "Your deployment:";
-    flavor = new Table(
+    flavor = "Your deployment: " + new Table(
         [
             {
                 "value": "Urban infiltration in Cy Central. You know the area well."
