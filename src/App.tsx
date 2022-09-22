@@ -61,13 +61,35 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Container>
-        <Row><Col className="label">NAME</Col><Col>{character.name}</Col><Col className="label">Class</Col><Col>{character.klass}</Col></Row>
-        <Row><Col className="label">AGILITY</Col><Col>{character.agility}</Col><Col className="label">HP</Col><Col>{character.hp < 4 ? 4 : character.hp}</Col></Row>
-        <Row><Col className="label">KNOWLEDGE</Col><Col>{character.knowledge}</Col><Col className="label">Glitches</Col><Col>{character.glitches}</Col></Row>
-        <Row><Col className="label">PRESENCE</Col><Col>{character.presence}</Col><Col className="label">Credits</Col><Col>{character.credits}</Col></Row>
-        <Row><Col className="label">STRENGTH</Col><Col>{character.strength}</Col><Col className="label">Debt</Col><Col>{character.debt}</Col></Row>
-        <Row><Col className="label">TOUGHNESS</Col><Col>{character.toughness}</Col><Col className="label">Style</Col><Col>{character.style}{character.feature}</Col></Row>
+      <Container style={{paddingTop: "1em"}}>
+        <Row>
+          <Col><img src="CompWith_CY_BORG_horiz_small.png" width="450" /></Col>
+          <Col style={{fontSize: 48}}>{character.klass}</Col>
+        </Row>
+        <Row>
+          <Col className="label" xs={2}>NAME</Col><Col>{character.name}</Col>
+          <Col className="label" xs={2}>HP</Col><Col>{character.hp < 4 ? 4 : character.hp}</Col>
+        </Row>
+        <Row>
+          <Col className="label" xs={2}>AGILITY</Col><Col>{character.agility}</Col>
+          <Col className="label" xs={2}>Glitches</Col><Col>{character.glitches}</Col>
+        </Row>
+        <Row>
+          <Col className="label" xs={2}>KNOWLEDGE</Col><Col>{character.knowledge}</Col>
+          <Col className="label" xs={2}>Style</Col><Col>{character.style}{character.feature}</Col>
+        </Row>
+        <Row>
+          <Col className="label" xs={2}>PRESENCE</Col><Col>{character.presence}</Col>
+          <Col className="label" xs={2}>Obsession</Col><Col>{character.obsession}</Col>
+        </Row>
+        <Row>
+          <Col className="label" xs={2}>STRENGTH</Col><Col>{character.strength}</Col>
+          <Col className="label" xs={2}>Credits</Col><Col>{character.credits}¤</Col>
+        </Row>
+        <Row>
+          <Col className="label" xs={2}>TOUGHNESS</Col><Col>{character.toughness}</Col>
+          <Col className="label" xs={2}>Debt</Col><Col>{character.debt}¤</Col>
+        </Row>
         <p style={{fontSize: 'smaller'}}>{character.description}</p>
         <p>{character.flavor}</p>
       </Container>
