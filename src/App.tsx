@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Table from 'react-bootstrap/Table';
 import BurnedHacker from './classes/burned_hacker';
 import Classless from './classes/classless';
 import DischargedCorpKiller from './classes/discharged_corp_killer';
@@ -16,24 +17,38 @@ import { TableValue } from './tables/table';
 function GearTable(props: {name: string, values: TableValue[]} ) {
   if (props.values.length > 0) {
     return (
+      // <Container>
+      //   <Row><Col>{props.name}</Col></Row>
+      //   {
+      //     props.values.map((item) => (
+      //       <Row><Col>{item.value}</Col><Col xs={9}>{item.details}</Col></Row>
+      //     ))
+      //   }
+      // </Container>
       <Container>
-        <Row><Col>{props.name}</Col></Row>
+      <p>{props.name}</p>
+      <Table striped bordered variant="dark" size="sm">
+        <tbody>
         {
-          props.values.map((item) => (
-            <Row><Col>{item.value}</Col><Col xs={9}>{item.details}</Col></Row>
+          props.values.map(item => (
+            <tr><td>{item.value}</td><td>{item.details}</td></tr>
           ))
         }
+        </tbody>
+      </Table>
       </Container>
     );
   }
   return <></>;
 }
 
-function SingleCol(props: {value?: string}) {
-  if (props.value) {
+function Specialty(props: {specialty?: TableValue}) {
+  if (props.specialty) {
     return (
-      <Row><Col>{props.value}</Col></Row>
-    );
+      <Container>
+        <Row><Col>Your specialty was {props.specialty.value}</Col><Col xs={9}>{props.specialty.details}</Col></Row>
+      </Container>
+    )
   }
   return <></>;
 }
@@ -55,15 +70,15 @@ function App() {
       <header className="App-header">
       <Container>
         <Row><Col>Name</Col><Col>{character.name}</Col><Col>Class</Col><Col>{character.klass}</Col></Row>
-        <Row><Col>Agility</Col><Col>{character.agility}</Col><Col>HP</Col><Col>{character.hp}</Col></Row>
+        <Row><Col>Agility</Col><Col>{character.agility}</Col><Col>HP</Col><Col>{character.hp < 4 ? 4 : character.hp}</Col></Row>
         <Row><Col>Knowledge</Col><Col>{character.knowledge}</Col><Col>Glitches</Col><Col>{character.glitches}</Col></Row>
         <Row><Col>Presence</Col><Col>{character.presence}</Col><Col>Credits</Col><Col>{character.credits}</Col></Row>
         <Row><Col>Strength</Col><Col>{character.strength}</Col><Col>Debt</Col><Col>{character.debt}</Col></Row>
         <Row><Col>Toughness</Col><Col>{character.toughness}</Col><Col>Style</Col><Col>{character.style}{character.feature}</Col></Row>
-        <SingleCol value={character.description}/>
-        <SingleCol value={character.flavor} />
+        <p>{character.description}</p>
+        <p>{character.flavor}</p>
       </Container>
-      <GearTable name='Your Specialty was' values={character.equipment('specialty')} />
+      <Specialty specialty={character.equipment('specialty')[0]} />
       <GearTable name='Gear' values={character.equipment('gear')} />
       <GearTable name='CyberTech' values={character.equipment('cybertech')} />
       <GearTable name='Nano-Powers' values={character.equipment('nano')} />
