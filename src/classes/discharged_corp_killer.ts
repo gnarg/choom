@@ -1,34 +1,18 @@
 import Table from '../tables/table';
-import Klass, { roll, rollAbility } from "./klass";
+import Klass from "./klass";
 import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
-import gear0 from '../tables/gear0.json';
-import gear1 from '../tables/gear1.json';
-import gear2 from '../tables/gear2.json';
-import features from '../tables/features.json';
-import wants from '../tables/wants.json';
-import styles from '../tables/style.json';
-import quirks from '../tables/quirks.json';
-import obsessions from '../tables/obsessions.json';
 
-export default class DischargedCorpKiller implements Klass {
+export default class DischargedCorpKiller extends Klass {
     name = "Discharged Corp Killer";
     description = "A good soldier in bad company, always fighting someone else’s war in the name of greed. Capitalism crushed your enthusiasm quickly enough, and you were discharged without severance.";
-    agility = rollAbility();
-    knowledge = rollAbility(-1);
-    presence = rollAbility(-1);
-    strength = rollAbility();
-    toughness = rollAbility(2);
-    hp = roll(8) + this.toughness;
-    glitches = roll(2);
+    agility = this.rollAbility();
+    knowledge = this.rollAbility(-1);
+    presence = this.rollAbility(-1);
+    strength = this.rollAbility();
+    toughness = this.rollAbility(2);
+    hp = this.roll(8) + this.toughness;
     special = "Autofire is always -1DR";
-    gear = [
-        new Table(weapons).lookup(11),
-        new Table(armor).lookup(4),
-        new Table(gear0).lookup(),
-        new Table(gear1).lookup(),
-        new Table(gear2).lookup(),
-    ];
     flavorDescription = "Your deployment";
     flavor = new Table(
         [
@@ -81,11 +65,15 @@ export default class DischargedCorpKiller implements Klass {
             }
         ]
     ).lookup();
-    credits = (roll(6) + roll(6)) * 10;
-    debt = (roll(6) + roll(6) + roll(6)) + 1000;
-    feature = new Table(features).lookup();
-    style = new Table(styles).lookup();
-    quirk = new Table(quirks).lookup();
-    wants = new Table(wants).lookup();
-    obsession = new Table(obsessions).lookup();
+
+    constructor() {
+        super();
+        this.gear = this.gear.concat(
+            [
+                new Table(weapons).lookup(11),
+                new Table(armor).lookup(4),
+            ]
+        )
+
+    }
 }

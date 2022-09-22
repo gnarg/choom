@@ -36,7 +36,7 @@
     },
     {
         "value": "Random cybertech",
-        "ref": "cybertech:0-9"
+        "ref": "cybertech:9"
     },
     {
         "value": "Cyberdeck",
@@ -44,6 +44,6 @@
     },
     {
         "value": "A random Nano power",
-        "ref": "nano-powers:0-11"
+        "ref": "nano_powers:11"
     }
 ]

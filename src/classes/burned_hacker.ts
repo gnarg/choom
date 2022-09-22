@@ -1,40 +1,19 @@
 import Table from '../tables/table';
 import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
-import gear0 from '../tables/gear0.json';
-import gear1 from '../tables/gear1.json';
-import gear2 from '../tables/gear2.json';
-import features from '../tables/features.json';
-import wants from '../tables/wants.json';
-import styles from '../tables/style.json';
-import quirks from '../tables/quirks.json';
-import obsessions from '../tables/obsessions.json';
 import apps from '../tables/apps.json';
+import Klass from './klass';
 
-import Klass, { roll, rollAbility } from './klass';
-
-export default class BurnedHacker implements Klass {
+export default class BurnedHacker extends Klass {
     name = "Burned Hacker";
     description = "/.You were one of the sharpest deckers in Cy. No one could use tech or warp the world with an App like you could. @@@@@@@@@@@@.&_ /.You don’t know what went wrong. You messed up. Maybe you were tricked; maybe you got sloppy. /.You glimpsed a terrible truth, and now you’re burnt. ///////////// No collective, no fallback, nothing.";
-    agility = rollAbility();
-    knowledge = rollAbility(2);
-    presence = rollAbility();
-    strength = rollAbility(-1);
-    toughness = rollAbility(-1);
-    hp = roll(6) + this.toughness;
-    glitches = roll(2);
+    agility = this.rollAbility();
+    knowledge = this.rollAbility(2);
+    presence = this.rollAbility();
+    strength = this.rollAbility(-1);
+    toughness = this.rollAbility(-1);
+    hp = this.roll(6) + this.toughness;
     special = "any starting Nano or Cybertech is replaced with a random App"
-    gear = [
-        new Table(weapons).lookup(7),
-        new Table(armor).lookup(2),
-        new Table(gear0).lookup(),
-        new Table(gear1).lookup(),
-        new Table(gear2).lookup(),
-        {
-            value: "Cyberdeck",
-            details: this.knowledge + 4 + " slots"
-        }
-    ];
     apps = [
         new Table(apps).lookup()
     ]
@@ -90,11 +69,19 @@ export default class BurnedHacker implements Klass {
             }
         ]
     ).lookup();
-    credits = (roll(6) + roll(6)) * 10;
-    debt = (roll(10) + roll(10) + roll(10) + roll(10) + roll(10) + roll(10)) + 1000;
-    feature = new Table(features).lookup();
-    style = new Table(styles).lookup();
-    quirk = new Table(quirks).lookup();
-    wants = new Table(wants).lookup();
-    obsession = new Table(obsessions).lookup();
+    debt = (this.roll(10) + this.roll(10) + this.roll(10) + this.roll(10) + this.roll(10) + this.roll(10)) + 1000;
+
+    constructor() {
+        super();
+        this.gear = this.gear.concat([
+            new Table(weapons).lookup(7),
+            new Table(armor).lookup(2),
+            {
+                value: "Cyberdeck",
+                details: this.knowledge + 4 + " slots"
+            }
+        ]);
+
+        // TODO if gear has any cyberwear or nanos, replace with apps
+    }
 }
