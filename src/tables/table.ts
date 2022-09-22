@@ -9,6 +9,14 @@ export type TableValue = {
     kind?: string;
 }
 
+/*
+TODO handle
+    {
+        "value": "Cyberdeck",
+        "details": "with d3 slots and 2 random apps"
+    }
+*/
+
 export default class Table {
     values: TableValue[];
     kind: string;

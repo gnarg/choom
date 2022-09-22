@@ -13,7 +13,7 @@ export default class DischargedCorpKiller extends Klass {
     toughness = this.rollAbility(2);
     hp = this.roll(8) + this.toughness;
     special = "Autofire is always -1DR";
-    flavorDescription = "Your deployment";
+    flavorDescription = "Your deployment:";
     flavor = new Table(
         [
             {
@@ -35,7 +35,7 @@ export default class DischargedCorpKiller extends Klass {
                 "value": "Didn’t get that far. Washed out."
             }
         ]
-    ).lookup();
+    ).lookup().value;
     bonusDescription = "You took something from you employer"
     bonus = new Table(
         [

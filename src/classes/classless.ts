@@ -5,12 +5,12 @@ import armor from '../tables/armor.json';
 
 export default class Classless extends Klass {
     klass = "Street Punk";
-    agility = this.rollAbility();
-    knowledge = this.rollAbility();
-    presence = this.rollAbility();
-    strength = this.rollAbility();
-    toughness = this.rollAbility();
-    hp = this.roll(8) + this.toughness;
+    agility;
+    knowledge;
+    presence;
+    strength;
+    toughness;
+    hp;
 
     constructor() {
         super()
@@ -19,6 +19,12 @@ export default class Classless extends Klass {
             new Table(armor).lookup(2),
         ]);
 
-        // TODO reroll two random abilities with +2
+        const bonus = [2, 2, 0, 0, 0].sort(() => Math.random() - 0.5);
+        this.agility = this.rollAbility(bonus[0]);
+        this.knowledge = this.rollAbility(bonus[1]);
+        this.presence = this.rollAbility(bonus[2]);
+        this.strength = this.rollAbility(bonus[3]);
+        this.toughness = this.rollAbility(bonus[4]);
+        this.hp = this.roll(8) + this.toughness;
     }
 }

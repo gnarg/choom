@@ -36,7 +36,7 @@ export default class ForsakenGangGoon extends Klass  {
                 "value": "threw you out for breaking the code. They’ll kill you if they see you again."
             }
         ]
-    ).lookup();
+    ).lookup().value;
     bonusDescription = "Your specialy was";
     bonus = new Table(
         [
@@ -65,13 +65,14 @@ export default class ForsakenGangGoon extends Klass  {
                 "details": "You always liked it old school: both hands raised, running straight at the enemy. Whatever weapon you begin with, you start with one for each hand. You can use it to make a second attack each round at DR14."
             }
         ]
-    ).lookup();
+    , 'specialty').lookup();
 
     constructor() {
         super();
         this.stuff = this.stuff.concat([
             new Table(weapons).lookup(5),
             new Table(armor).lookup(1),
+            this.bonus,
         ]);
     }        
 }

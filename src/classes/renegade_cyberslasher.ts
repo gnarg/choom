@@ -35,7 +35,7 @@ export default class RenegadeCyberslasher extends Klass {
                 "value": "strengthening your inner daemon through a chaos magick ritual."
             }
         ]
-    ).lookup();
+    ).lookup().value;
     bonusDescription = "Your trenchcoat hides most of your";
     bonus = new Table(
         [

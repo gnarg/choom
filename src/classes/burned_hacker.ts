@@ -14,7 +14,7 @@ export default class BurnedHacker extends Klass {
     toughness = this.rollAbility(-1);
     hp = this.roll(6) + this.toughness;
     special = "any starting Nano or Cybertech is replaced with a random App"
-    flavorDescription = "You've found a terrible truth";
+    flavorDescription = "You've found a terrible truth:";
     flavor = new Table(
         [
             {
@@ -36,7 +36,7 @@ export default class BurnedHacker extends Klass {
                 "value": "An unknown collective has opened backdoors in Cy’s major data nodes. No hackers have claimed credit."
             }
         ]
-    ).lookup();
+    ).lookup().value;
     bonusDescription = "You built an App.";
     bonus = new Table(
         [

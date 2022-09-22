@@ -18,25 +18,25 @@ export default class ShunnedNano extends Klass {
     flavor = new Table(
         [
             {
-                "value": "You spent a wild night with a group of neo-pagan cultists, perfomring profane rites to some snake god"
+                "value": "you spent a wild night with a group of neo-pagan cultists, perfomring profane rites to some snake god."
             },
             {
-                "value": "A star fell close to you building and you were a curious child"
+                "value": "a star fell close to you building and you were a curious child."
             },
             {
-                "value": "You found drugs. Free drugs. They were neither drugs nor entirely free."
+                "value": "you found drugs. Free drugs. They were neither drugs nor entirely free."
             },
             {
-                "value": "You were kidnapped and subjected to horrible experiments."
+                "value": "you were kidnapped and subjected to horrible experiments."
             },
             {
-                "value": "A G0 rat bit you."
+                "value": "a G0 rat bit you."
             },
             {
-                "value": "You were born."
+                "value": "you were born."
             }
         ]
-    ).lookup();
+    ).lookup().value;
     bonusDescription = "You also have one of these";
     bonus = new Table(
         [
@@ -77,11 +77,9 @@ export default class ShunnedNano extends Klass {
             this.bonus
         ]).map(item => {
             if (item.kind === 'cybertech' || item.kind === 'app') {
-                return new Table(nanos, 'nano').lookup();
+                return [ new Table(nanos, 'nano').lookup(), new Table(infestations, 'infestation').lookup() ];
             }
             return item;
-        });
-
-        // TODO extra infestation for each extra nano
+        }).flat();
     }
 }

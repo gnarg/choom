@@ -21,7 +21,7 @@ export default abstract class BaseKlass {
     abstract hp: number;
     special?: string;
     flavorDescription?: string;
-    flavor?: TableValue;
+    flavor?: string;
     bonusDescription?: string;
     bonus?: TableValue;
     glitches = this.roll(2);

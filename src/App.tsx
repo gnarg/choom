@@ -53,7 +53,9 @@ function App() {
         <Row><Col>Presence</Col><Col>{character.presence}</Col><Col>Credits</Col><Col>{character.credits}</Col></Row>
         <Row><Col>Strength</Col><Col>{character.strength}</Col><Col>Debt</Col><Col>{character.debt}</Col></Row>
         <Row><Col>Toughness</Col><Col>{character.toughness}</Col><Col>Style</Col><Col>{character.style}{character.feature}</Col></Row>
+        <Row><Col>{character.flavorDescription + ' ' + character.flavor}</Col></Row>
       </Container>
+      <GearTable name='Your Specialty was' values={character.equipment('specialty')} />
       <GearTable name='Gear' values={character.equipment('gear')} />
       <GearTable name='CyberTech' values={character.equipment('cybertech')} />
       <GearTable name='Nano-Powers' values={character.equipment('nano')} />
