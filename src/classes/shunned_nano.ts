@@ -75,8 +75,13 @@ export default class ShunnedNano extends Klass {
             new Table(nanos, 'nano').lookup(),
             new Table(infestations, 'infestation').lookup(),
             this.bonus
-        ])
+        ]).map(item => {
+            if (item.kind === 'cybertech' || item.kind === 'app') {
+                return new Table(nanos, 'nano').lookup();
+            }
+            return item;
+        });
 
-        // TODO replace any apps or cybertech with more nanos
+        // TODO extra infestation for each extra nano
     }
 }

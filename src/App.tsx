@@ -40,7 +40,7 @@ function GearTable(props: {name: string, values: TableValue[]} ) {
 }
 
 function App() {
-  const character = new classes[Math.floor(Math.random() * classes.length)];
+  const character = new classes[Math.floor(Math.random() * classes.length)]();
 
   return (
     <div className="App">

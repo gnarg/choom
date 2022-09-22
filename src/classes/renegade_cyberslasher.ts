@@ -73,8 +73,11 @@ export default class RenegadeCyberslasher extends Klass {
             new Table(armor).lookup(2),
             new Table(cybertech, 'cybertech').lookup(11),
             this.bonus,
-        ])
-
-        // TODO replace apps or nanos in gear with cybertech:12
+        ]).map(item => {
+            if (item.kind === 'nano' || item.kind === 'app') {
+                return new Table(cybertech, 'cybertech').lookup();
+            }
+            return item;
+        });
     }
 }

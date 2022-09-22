@@ -65,7 +65,7 @@ export default class BurnedHacker extends Klass {
                 "details": "Deal damage to cybered target or drone/vehicle/mech based on their size. Dog-sized targets take d6 damage, human d10, car 2d8, and larger targets take 2d12"
             }
         ]
-    ).lookup();
+    , 'app').lookup();
     debt = (this.roll(10) + this.roll(10) + this.roll(10) + this.roll(10) + this.roll(10) + this.roll(10)) + 1000;
 
     constructor() {
@@ -80,8 +80,11 @@ export default class BurnedHacker extends Klass {
             },
             new Table(apps, 'app').lookup(),
             this.bonus,
-        ]);
-
-        // TODO if gear has any cyberwear or nanos, replace with apps
+        ]).map(item => {
+            if (item.kind === 'cybertech' || item.kind === 'nano') {
+                return new Table(apps, 'app').lookup();
+            }
+            return item;
+        });
     }
 }
