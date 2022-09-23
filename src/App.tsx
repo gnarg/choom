@@ -69,7 +69,7 @@ function App() {
       <Container>
         <Row style={{paddingTop: "1em", paddingBottom: "1em"}}>
           <Col><img src="CompWith_CY_BORG_horiz_small.png" width="100%" /></Col>
-          <Col style={{fontFamily: 'Rubik Glitch', fontSize: 52, fontWeight: 'bold'}}>{character.klass}</Col>
+          <Col style={{fontFamily: 'Rubik Glitch', fontSize: '4vw', fontWeight: 'bold'}}>{character.klass}</Col>
         </Row>
         <Row>
           <Col>
