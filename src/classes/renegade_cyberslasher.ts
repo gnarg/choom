@@ -56,7 +56,8 @@ export default class RenegadeCyberslasher extends Klass {
             },
             {
                 "value": "Dual Logans",
-                "details": "d8 that make that sound when you pop ʼem out. Once per fight, you can surprise a victim by popping out feet claws as well, attacking at DR8."
+                "details": "d8 that make that sound when you pop ʼem out. Once per fight, you can surprise a victim by popping out feet claws as well, attacking at DR8.",
+                kind: "cybertech"
             },
             {
                 "value": "GodDAMN flail",

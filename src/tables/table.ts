@@ -46,7 +46,7 @@ export default class Table {
             nano_powers,
         }
         const table_value = this.values[Math.floor(Math.random() * max)];
-        table_value.kind = this.kind;
+        table_value.kind ||= this.kind;
         if (table_value.value === "Cyberdeck") {
             // try again, disallow this one for now
             return new Table(this.values).lookup();
