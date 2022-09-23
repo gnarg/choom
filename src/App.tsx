@@ -40,11 +40,15 @@ function Specialty(props: {specialty?: TableValue}) {
   if (props.specialty) {
     return (
       <Container>
-      <p>Your specialty was <b>{props.specialty.value}</b>: <span>{props.specialty.details}</span></p>
+      <p className="rules">Your specialty was <b>{props.specialty.value}</b>: <span>{props.specialty.details}</span></p>
       </Container>
     )
   }
   return <></>;
+}
+
+function StatLine(props: {name: string, value: string | number}) {
+  return <Row><Col className="label rules">{props.name}</Col><Col xs={7}>{props.value}</Col></Row>
 }
 
 function App() {
@@ -64,34 +68,34 @@ function App() {
       <header className="App-header">
       <Container>
         <Row style={{paddingTop: "1em", paddingBottom: "1em"}}>
-          <Col><img src="CompWith_CY_BORG_horiz_small.png" width="450" /></Col>
+          <Col><img src="CompWith_CY_BORG_horiz_small.png" width="100%" /></Col>
           <Col style={{fontFamily: 'Rubik Glitch', fontSize: 52, fontWeight: 'bold'}}>{character.klass}</Col>
         </Row>
         <Row>
           <Col>
             <Container>
-              <Row><Col className="label">NAME</Col><Col xs={7}>{character.name}</Col></Row>
-              <Row><Col className="label">AGILITY</Col><Col xs={7}>{character.agility}</Col></Row>
-              <Row><Col className="label">KNOWLEDGE</Col><Col xs={7}>{character.knowledge}</Col></Row>
-              <Row><Col className="label">PRESENCE</Col><Col xs={7}>{character.presence}</Col></Row>
-              <Row><Col className="label">STRENGTH</Col><Col xs={7}>{character.strength}</Col></Row>
-              <Row><Col className="label">TOUGHNESS</Col><Col xs={7}>{character.toughness}</Col></Row>
+              <StatLine name="NAME" value={character.name} />
+              <StatLine name="AGILITY" value={character.agility} />
+              <StatLine name="KNOWLEDGE" value={character.knowledge} />
+              <StatLine name="PRESENCE" value={character.presence} />
+              <StatLine name="STRENGTH" value={character.strength} />
+              <StatLine name="TOUGHNESS" value={character.toughness} />
             </Container>
           </Col>
           <Col>
             <Container>
-              <Row><Col className="label">HP</Col><Col xs={7}>{character.hp < 4 ? 4 : character.hp}</Col></Row>
-              <Row><Col className="label">G̷l̶i̴t̷c̸h̶e̴s̸</Col><Col xs={7}>{character.glitches}</Col></Row>
-              <Row><Col className="label">Style</Col><Col xs={7}>{character.style}{character.feature}</Col></Row>
-              <Row><Col className="label">Obsession</Col><Col xs={7}>{character.obsession}</Col></Row>
-              <Row><Col className="label">Credits</Col><Col xs={7}>{character.credits}¤</Col></Row>
-              <Row><Col className="label">Debt</Col><Col xs={7}>{character.debt}¤</Col></Row>
+              <StatLine name="HP" value={character.hp < 4 ? 4 : character.hp} />
+              <StatLine name="G̷l̶i̴t̷c̸h̶e̴s̸" value={character.glitches} />
+              <StatLine name="Style" value={character.style+character.feature} />
+              <StatLine name="Obsession" value={character.obsession} />
+              <StatLine name="Credits" value={character.credits + "¤"} />
+              <StatLine name="Debt" value={character.debt + "¤"} />
             </Container>
           </Col>
         </Row>
         <p style={{fontSize: 'smaller'}}>{character.description}</p>
         <p>{character.flavor}</p>
-        <p style={{backgroundColor: 'magenta', color: 'white', textAlign: 'center'}}>{character.special}</p>
+        <p className="rules">{character.special}</p>
       </Container>
       <Specialty specialty={character.equipment('specialty')[0]} />
       <GearTable name='./GEAR' values={character.equipment('gear')} />

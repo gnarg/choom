@@ -33,7 +33,10 @@
 .label {
   font-size: larger;
   font-weight: bold;
+  text-align: right;
+}
+
+.rules {
   color: white;
   background-color: magenta;
-  text-align: right;
 }
