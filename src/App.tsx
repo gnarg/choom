@@ -48,7 +48,7 @@ function Specialty(props: {specialty?: TableValue}) {
 }
 
 function StatLine(props: {name: string, value: string | number}) {
-  return <Row><Col className="label rules">{props.name}</Col><Col xs={7}>{props.value}</Col></Row>
+  return <Row><Col className="label rules">{props.name}</Col><Col>{props.value}</Col></Row>
 }
 
 function App() {
