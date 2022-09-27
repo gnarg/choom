@@ -14,19 +14,7 @@ TODO handle
     gear2
     {
         "value": "Cyberdeck",
-        "details": "with d3 slots and 2 random apps"
-    }
-
-    gear0
-    {
-        "value": "d4+1 flashbangs",
-        "details": "toughness DR14 or +4DR for d4 rounds"
-    }
-
-    gear0
-    {
-        "value": "d4 hand grenades",
-        "details": "d6 damage to up to d3 targets"
+        "details": "with [1-3] slots and 2 random apps"
     }
 */
 
@@ -47,10 +35,17 @@ export default class Table {
         }
         const table_value = this.values[Math.floor(Math.random() * max)];
         table_value.kind ||= this.kind;
+
         if (table_value.value === "Cyberdeck") {
             // try again, disallow this one for now
             return new Table(this.values).lookup();
         }
+
+        table_value.value = this.rollInline(table_value.value);
+        if (table_value.details) {
+            table_value.details = this.rollInline(table_value.details);
+        }
+
         if (table_value.ref) {
             const [table_name, max] = table_value.ref.split(":");
             const value = new Table(tables[table_name]).lookup(parseInt(max));
@@ -58,5 +53,13 @@ export default class Table {
             return value;
         }
         return table_value;
+    }
+
+    roll(max:number, min=1) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    rollInline(description: string): string {
+        return description.replace(/\[(\d)-(\d)\]/, (_, min, max) => String(this.roll(max, min)));
     }
 }

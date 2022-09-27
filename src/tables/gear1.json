@@ -21,7 +21,7 @@
     },
     {
         "value": "First aid kit",
-        "details": "d3 uses, stops bleeding/infection and heals d6 HP"
+        "details": "[1-3] uses, stops bleeding/infection and heals d6 HP"
     },
     {
         "value": "Crowbar",

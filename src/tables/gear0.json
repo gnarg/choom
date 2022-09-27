@@ -4,7 +4,7 @@
     },
     {
         "value": "CWPC Metro card",
-        "details": "d8 trips left"
+        "details": "[1-8] trips left"
     },
     {
         "value": "Hangover"
@@ -13,11 +13,11 @@
         "value": "Pack of realTobaco™ smokes"
     },
     {
-        "value": "d4+1 flashbangs",
+        "value": "[2-5] flashbangs",
         "details": "toughness DR14 or +4DR for d4 rounds"
     },
     {
-        "value": "d4 hand grenades",
+        "value": "[1-4] hand grenades",
         "details": "d6 damage to up to d3 targets"
     },
     {
