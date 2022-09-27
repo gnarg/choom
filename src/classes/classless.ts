@@ -4,7 +4,7 @@ import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
 
 export default class Classless extends Klass {
-    klass = "Street Punk";
+    klass = "Classless Punk";
     agility;
     knowledge;
     presence;

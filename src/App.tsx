@@ -68,8 +68,8 @@ function App() {
       <header className="App-header">
       <Container>
         <Row style={{paddingTop: "1em", paddingBottom: "1em"}}>
-          <Col><img src="CompWith_CY_BORG_horiz_small.png" width="100%" /></Col>
-          <Col style={{fontFamily: 'Rubik Glitch', fontSize: '4vw', fontWeight: 'bold'}}>{character.klass}</Col>
+          <Col><img src="CompWith_CY_BORG_horiz_small.png" width="100%" alt="Compatible with CY_BORG" /></Col>
+          <Col className="klass">{character.klass}</Col>
         </Row>
         <Row>
           <Col>
@@ -94,7 +94,7 @@ function App() {
           </Col>
         </Row>
         <p style={{fontSize: 'smaller'}}>{character.description}</p>
-        <p>{character.flavor}</p>
+        <p style={{fontSize: 'smaller'}}>{character.flavor}</p>
         <p className="rules">{character.special}</p>
       </Container>
       <Specialty specialty={character.equipment('specialty')[0]} />
