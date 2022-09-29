@@ -65,12 +65,12 @@ export default class OrphanedGearHead extends Klass {
         ]
     ).lookup();
 
-    constructor() {
-        super();
+    classGear() {
         this.stuff = this.stuff.concat([
             new Table(weapons).lookup(11),
             new Table(armor).lookup(2),
             this.bonus,
         ]);
+        return this;
     }
 }

@@ -1,7 +1,6 @@
 import Klass from "./klass";
 import Table from "../tables/table";
 import nanos from "../tables/nano_powers.json";
-import infestations from "../tables/infestations.json";
 import weapons from '../tables/weapons.json';
 import armor from '../tables/armor.json';
 
@@ -66,19 +65,19 @@ export default class ShunnedNano extends Klass {
         ]
     ).lookup();
 
-    constructor() {
-        super()
+
+    classGear() {
         this.stuff = this.stuff.concat([
             new Table(weapons).lookup(5),
             new Table(armor).lookup(1),
-            new Table(nanos, 'nano').lookup(),
-            new Table(infestations, 'infestation').lookup(),
+            new Table(nanos, 'nano_powers').lookup(),
             this.bonus
         ]).map(item => {
             if (item.kind === 'cybertech' || item.kind === 'app') {
-                return [ new Table(nanos, 'nano').lookup(), new Table(infestations, 'infestation').lookup() ];
+                return new Table(nanos, 'nano_powers').lookup();
             }
             return item;
-        }).flat();
+        });
+        return this;
     }
 }

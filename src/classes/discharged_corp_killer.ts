@@ -65,15 +65,14 @@ export default class DischargedCorpKiller extends Klass {
         ]
     ).lookup();
 
-    constructor() {
-        super();
+    classGear() {
         this.stuff = this.stuff.concat(
             [
                 new Table(weapons).lookup(11),
                 new Table(armor).lookup(4),
                 this.bonus,
             ]
-        )
-
+        );
+        return this;
     }
 }

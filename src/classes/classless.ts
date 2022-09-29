@@ -14,11 +14,6 @@ export default class Classless extends Klass {
 
     constructor() {
         super()
-        this.stuff = this.stuff.concat([
-            new Table(weapons).lookup(11),
-            new Table(armor).lookup(2),
-        ]);
-
         const bonus = [2, 2, 0, 0, 0].sort(() => Math.random() - 0.5);
         this.agility = this.rollAbility(bonus[0]);
         this.knowledge = this.rollAbility(bonus[1]);
@@ -26,5 +21,13 @@ export default class Classless extends Klass {
         this.strength = this.rollAbility(bonus[3]);
         this.toughness = this.rollAbility(bonus[4]);
         this.hp = this.roll(8) + this.toughness;
+    }
+
+    classGear() {
+        this.stuff = this.stuff.concat([
+            new Table(weapons).lookup(11),
+            new Table(armor).lookup(2),
+        ]);
+        return this;
     }
 }

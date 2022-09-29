@@ -7,6 +7,8 @@ import obsessions from '../tables/obsessions.json';
 import gear0 from '../tables/gear0.json';
 import gear1 from '../tables/gear1.json';
 import gear2 from '../tables/gear2.json';
+import apps from '../tables/apps.json';
+import infestations from '../tables/infestations.json';
 import names from '../tables/names.json';
 
 export default abstract class BaseKlass {
@@ -24,11 +26,7 @@ export default abstract class BaseKlass {
     bonusDescription?: string;
     bonus?: TableValue;
     glitches = this.roll(2);
-    stuff = [
-      new Table(gear0).lookup(),
-      new Table(gear1).lookup(),
-      new Table(gear2).lookup(),
-    ];
+    stuff: TableValue[] = [];
     feature = new Table(features).lookup().value;
     style = new Table(styles).lookup().value;
     quirk = new Table(quirks).lookup().value;
@@ -36,6 +34,42 @@ export default abstract class BaseKlass {
     obsession = new Table(obsessions).lookup().value;
     credits = (this.roll(6) + this.roll(6)) * 10;
     debt = (this.roll(6) + this.roll(6) + this.roll(6)) * 1000;
+
+    gear(stuff?: TableValue[]) {
+      if (stuff) {
+        this.stuff = stuff;
+      } else {
+        this.stuff = [
+          new Table(gear0).lookup(),
+          new Table(gear1).lookup(),
+          new Table(gear2).lookup(),
+        ]
+      }
+      return this;
+    };
+
+    classGear() {
+      return this;
+    }
+
+    appsForCyberdeck() {
+      // Cyberdeck on gear table comes with two random apps
+      if (this.stuff.find(thing => thing.value === "Used cyberdeck")) {
+        this.stuff.push(new Table(apps, 'apps').lookup());
+        this.stuff.push(new Table(apps, 'apps').lookup());
+      }
+      return this;
+    }
+
+    infestationsForNanos() {
+      // Infestation for each nano-power
+      this.stuff.forEach(thing => {
+        if (thing.kind === 'nano_powers') {
+          this.stuff.push(new Table(infestations, 'infestations').lookup());
+        }
+      });
+      return this;
+    }
 
     rollAbility(bonus=0) {
       const p = Math.random() * 100;

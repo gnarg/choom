@@ -66,12 +66,12 @@ export default class ForsakenGangGoon extends Klass  {
         ]
     , 'specialty').lookup();
 
-    constructor() {
-        super();
+    classGear() {
         this.stuff = this.stuff.concat([
             new Table(weapons).lookup(5),
             new Table(armor).lookup(1),
             this.bonus,
         ]);
-    }        
+        return this;
+    }
 }

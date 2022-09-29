@@ -66,18 +66,18 @@ export default class RenegadeCyberslasher extends Klass {
         ]
     ).lookup();
 
-    constructor() {
-        super();
+    classGear() {
         this.stuff = this.stuff.concat([
             new Table(weapons, 'weapon').lookup(11),
             new Table(armor).lookup(2),
             new Table(cybertech, 'cybertech').lookup(11),
             this.bonus,
         ]).map(item => {
-            if (item.kind === 'nano' || item.kind === 'app') {
+            if (item.kind === 'nano_powers' || item.kind === 'apps') {
                 return new Table(cybertech, 'cybertech').lookup();
             }
             return item;
         });
+        return this;
     }
 }

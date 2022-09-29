@@ -61,7 +61,11 @@ function App() {
     RenegadeCyberslasher,
     ShunnedNano
   ];
-  const character = new classes[Math.floor(Math.random() * classes.length)]();
+  const character = new classes[Math.floor(Math.random() * classes.length)]()
+    .gear()
+    .classGear()
+    .appsForCyberdeck()
+    .infestationsForNanos();
 
   return (
     <div className="App">
@@ -100,9 +104,9 @@ function App() {
       <Specialty specialty={character.equipment('specialty')[0]} />
       <GearTable name='./GEAR' values={character.equipment('gear')} />
       <GearTable name='./CYBERTECH' values={character.equipment('cybertech')} />
-      <GearTable name='./NANOS' values={character.equipment('nano')} />
-      <GearTable name='./INFESTATIONS' values={character.equipment('infestation')} />
-      <GearTable name='./APPS' values={character.equipment('app')} />
+      <GearTable name='./NANOS' values={character.equipment('nano_powers')} />
+      <GearTable name='./INFESTATIONS' values={character.equipment('infestations')} />
+      <GearTable name='./APPS' values={character.equipment('apps')} />
       </header>
 
     </div>

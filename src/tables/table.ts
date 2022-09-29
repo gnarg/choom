@@ -9,15 +9,6 @@ export type TableValue = {
     kind?: string;
 }
 
-/*
-TODO handle
-    gear2
-    {
-        "value": "Cyberdeck",
-        "details": "with [1-3] slots and 2 random apps"
-    }
-*/
-
 export default class Table {
     values: TableValue[];
     kind: string;
@@ -31,15 +22,10 @@ export default class Table {
         const tables: Record<string, TableValue[]> = {
             apps,
             cybertech,
-            nano_powers,
+            nano_powers
         }
         const table_value = this.values[Math.floor(Math.random() * max)];
         table_value.kind ||= this.kind;
-
-        if (table_value.value === "Cyberdeck") {
-            // try again, disallow this one for now
-            return new Table(this.values).lookup();
-        }
 
         table_value.value = this.rollInline(table_value.value);
         if (table_value.details) {

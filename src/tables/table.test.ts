@@ -16,3 +16,11 @@ test("roll inline die", () => {
     expect(value.value).toMatch(/^\d test winguses/);
     expect(value.details).toMatch(/test \d thingies/);
 });
+
+test("ref looks up from referred table", () => {
+    const test_table = [ { value: "A random app", ref: "apps:1" } ];
+    const value = new Table(test_table).lookup();
+
+    expect(value.value).toBe("WEIAN-Hammer");
+    expect(value.kind).toBe("apps");
+});
