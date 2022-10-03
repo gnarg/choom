@@ -93,7 +93,7 @@ function App() {
               <StatLine name="Style" value={character.style+character.feature} />
               <StatLine name="Obsession" value={character.obsession} />
               <StatLine name="Credits" value={character.credits + "¤"} />
-              <StatLine name="Debt" value={character.debt + "¤"} />
+              <Row><Col className="label rules" id="ability-debt">Debt</Col><Col>{character.debt + "¤"}<a href="#creditor">†</a></Col></Row>
             </Container>
           </Col>
         </Row>
@@ -103,12 +103,12 @@ function App() {
       </Container>
       <Specialty specialty={character.equipment('specialty')[0]} />
       <GearTable name='./GEAR' values={character.equipment('gear')} />
+      <GearTable name='./APPS' values={character.equipment('apps')} />
       <GearTable name='./CYBERTECH' values={character.equipment('cybertech')} />
       <GearTable name='./NANOS' values={character.equipment('nano_powers')} />
       <GearTable name='./INFESTATIONS' values={character.equipment('infestations')} />
-      <GearTable name='./APPS' values={character.equipment('apps')} />
+      <p id="creditor">† to {character.creditor}</p>
       </header>
-
     </div>
   );
 }

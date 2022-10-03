@@ -10,6 +10,7 @@ import gear2 from '../tables/gear2.json';
 import apps from '../tables/apps.json';
 import infestations from '../tables/infestations.json';
 import names from '../tables/names.json';
+import creditors  from '../tables/creditors.json';
 
 export default abstract class BaseKlass {
     abstract klass: string;
@@ -34,6 +35,7 @@ export default abstract class BaseKlass {
     obsession = new Table(obsessions).lookup().value;
     credits = (this.roll(6) + this.roll(6)) * 10;
     debt = (this.roll(6) + this.roll(6) + this.roll(6)) * 1000;
+    creditor = new Table(creditors).lookup().value;
 
     gear(stuff?: TableValue[]) {
       if (stuff) {
